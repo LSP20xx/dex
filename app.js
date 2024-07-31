@@ -17,13 +17,12 @@ app.get('/usuarios', (req, res) => {
 app.post('/usuarios', (req, res) => {
     var nuevoUser = req.body
     console.log(req)
-
     nuevoUser.id = datos.usuarios.length + 1
-
     datos.usuarios.push(nuevoUser)
-
     res.send('ok')
-})
+});
+
+
 
 
 app.listen({ port: 5000 },
